@@ -1,5 +1,7 @@
-echo "Enter the number"
-read n
+echo "Enter the range"
+read n m
+while [ $n -le $m ]
+do
 t=$n
 s=0
 b=0
@@ -14,6 +16,7 @@ done
 if [ $s -eq $t ]
 then
 echo "$t Amstrong number"
-else
-echo "$t Not an Armstrong number"
 fi
+t=`expr $t + 1`
+n=$t
+done
